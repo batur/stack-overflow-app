@@ -1,0 +1,74 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "google",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    // jsdoc validation off for temporary
+    "require-jsdoc": "off",
+    "import/no-anonymous-default-export": "off",
+    "indent": ["error", 2],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^I",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "max-len": ["error", { "code": 120 }],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "object-curly-spacing": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "postcss.config.js",
+    "tailwind.config.js"
+  ]
+}

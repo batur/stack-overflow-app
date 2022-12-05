@@ -1,6 +1,6 @@
-build/*
-public/*
-docs/*
-templates/*
-src/react-app-env.d.ts
-src/serviceWorker.ts
+node_modules
+public
+dist
+
+postcss.config.js
+tailwind.config.js
